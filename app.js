@@ -26,10 +26,12 @@ function calculateProfitOrLoss(initialPriceRef, currentPriceRef, quantityRef) {
     var currentValue = stockValueCalculator(currentPriceRef, quantityRef);
 
     if (initialValue > currentValue) {
+        outputText.style.color = "red";
         var loss = initialValue - currentValue;
         var lossPercentage = (loss / initialValue) * 100;
         showOutput(`Whoops! Your loss is ${Number.parseFloat(loss).toFixed(2)} and loss percentage is ${Number.parseFloat(lossPercentage).toFixed(2)}% 😢`);
     } else if (currentValue > initialValue) {
+        outputText.style.color = "green";
         var profit = currentValue - initialValue;
         var profitPercentage = (profit / initialValue) * 100;
         showOutput(`Yay! Your profit is ${Number.parseFloat(profit).toFixed(2)} and profit percentage is ${Number.parseFloat(profitPercentage).toFixed(2)}% 🚀`);

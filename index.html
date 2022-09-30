@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,23 @@
     <link rel="stylesheet" href="styles.css">
     <title>Mark-14 Stocks</title>
 </head>
+
 <body>
-    <h1>Mark-14 Stocks</h1>
-    <main>
-        <label for="initial-price">Initial Price
-        <input id="initial-price" type="number" placeholder="Enter Initial Price"></label>
-        <label for="quantity">Quantity of Stocks
-        <input id="quantity" type="number" placeholder="Enter Quantity of Stocks"></label>
-        <label for="current-price">Current Price
-        <input id="current-price" type="number" placeholder="Enter Current Price of the stocks"></label>
-        <button id="check-btn">Tell me!</button>
-        <div id="output"></div>
-    </main>
+    <div class="container container-center">
+        <h1 class="heading">Mark-14 Stocks</h1>
+        <main>
+            <label class="input-label" for="initial-price">Initial Price
+                <input class="input" id="initial-price" type="number" placeholder="Enter Initial Price"></label>
+            <label class="input-label" for="quantity">Quantity of Stocks
+                <input class="input" id="quantity" type="number" placeholder="Enter Quantity of Stocks"></label>
+            <label class="input-label" for="current-price">Current Price
+                <input class="input" id="current-price" type="number"
+                    placeholder="Enter Current Price of the stocks"></label>
+            <button id="check-btn">Tell me!</button>
+            <div id="output"></div>
+        </main>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
