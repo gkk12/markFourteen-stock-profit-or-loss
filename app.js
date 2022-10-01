@@ -11,8 +11,14 @@ function submitHandler() {
     var currentPriceRef = Number(currentPrice.value);
     var quantityRef = Number(quantityOfStocks.value);
     if (!initialPriceRef || !currentPriceRef || !quantityRef) {
+        outputText.style.color = "red";
         showOutput(`Please fill in all the fields`);
-    } else {
+    } else if(initialPriceRef <=0 || currentPriceRef <=0 || quantityRef <=0)
+    {
+        outputText.style.color = "red";
+        showOutput(`The numbers related to stocks cannot be negative`);
+    }
+    else {
         calculateProfitOrLoss(initialPriceRef, currentPriceRef, quantityRef);
     }
 }
@@ -36,6 +42,7 @@ function calculateProfitOrLoss(initialPriceRef, currentPriceRef, quantityRef) {
         var profitPercentage = (profit / initialValue) * 100;
         showOutput(`Yay! Your profit is ${Number.parseFloat(profit).toFixed(2)} and profit percentage is ${Number.parseFloat(profitPercentage).toFixed(2)}% 🚀`);
     } else {
+        outputText.style.color = "blue";
         showOutput(`No pain no gain and no gain no pain 🙂`);
     }
 }
