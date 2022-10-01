@@ -13,7 +13,7 @@ function submitHandler() {
     if (!initialPriceRef || !currentPriceRef || !quantityRef) {
         outputText.style.color = "red";
         showOutput(`Please fill in all the fields`);
-    } else if(initialPriceRef <=0 || currentPriceRef <=0 || quantityRef <=0)
+    } else if(initialPriceRef <0 || currentPriceRef <0 || quantityRef <0)
     {
         outputText.style.color = "red";
         showOutput(`The numbers related to stocks cannot be negative`);
